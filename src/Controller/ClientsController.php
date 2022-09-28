@@ -1,11 +1,14 @@
 <?php
-namespace ClientsController ;
+namespace Chaminadepierre\Dyma\Controller;
+use PDOException;
+use Chaminadepierre\Dyma\Entity\Clients;
+use Chaminadepierre\Dyma\Controller\DbController;
 
 require_once './index.php';
 
-use Db\DbController;
-use User\Clients;
-use PDOException;
+
+
+
 
 class ClientsController extends DbController
 {

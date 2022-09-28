@@ -1,10 +1,11 @@
 <?php
-namespace Db; 
+namespace Chaminadepierre\Dyma\Controller;
+
 use PDO;
 use PDOException;
 
 
-class DbController extends PDO
+ class DbController extends PDO
 {
 
   public function connect () {

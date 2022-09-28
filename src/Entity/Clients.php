@@ -1,6 +1,5 @@
 <?php
-
-namespace User; 
+namespace Chaminadepierre\Dyma\Entity;
 
 
 class Clients

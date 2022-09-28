@@ -1,8 +1,10 @@
 <?php 
+namespace Chaminadepierre\Dyma;
 
+require_once './vendor/autoload.php';
 
-use ClientsController\ClientsController ; 
 require_once './src/View/header.php';
+
 
 //$nomDomaine = $_SERVER["HTTP_HOST"]; // string(14) "localhost:8888"
 //$chemin = $_SERVER["REQUEST_URI"]; // string(20) "/dyma/"
@@ -27,11 +29,7 @@ require_once './src/View/header.php';
    <button class="w-100 btn btn-lg btn-primary" type="submit">Ajouter</button>
    <p class="mt-5 mb-3 text-muted">&copy; 2017–2022</p>
  </form>
-<?php
 
-
-
-?>
 
 <?php
 
