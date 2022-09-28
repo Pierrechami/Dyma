@@ -1,9 +1,10 @@
 <?php
 namespace ClientsController ;
 
+require_once './index.php';
+
 use Db\DbController;
 use User\Clients;
-use PageAccueil;
 use PDOException;
 
 class ClientsController extends DbController
@@ -29,7 +30,7 @@ class ClientsController extends DbController
 
       public function create () {
 
-        if($$this->clients() !== null){
+        if($this->clients() !== null){
 
             $user = $this->clients();
             $name = $user->getName();
@@ -38,9 +39,9 @@ class ClientsController extends DbController
         try{
             $pdo = $this->connect();
             $statement = $pdo->prepare("INSERT INTO User VALUES (
-                $name , $surname
+                :name , :surname
             )");
-            $statement->execute();
+            $statement->execute(array(':name' => $name , ':surname' => $surname));
            }catch(PDOException $e){
                echo  $e->getMessage();
                return false; 

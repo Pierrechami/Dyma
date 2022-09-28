@@ -1,6 +1,6 @@
 <?php 
 
-namespace PageAccueil ; 
+
 
 require_once './src/View/header.php';
 
