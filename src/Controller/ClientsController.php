@@ -11,7 +11,7 @@ class ClientsController extends DbController
 {
 
     public function clients (){
-        if (isset($_GET["name"]) && isset($_GET["surname"])) {
+        if (isset($_GET["name"]) && isset($_GET["surname"]) && isset($_GET["submit"])) {
             $name =  $_GET["name"];
             $surname = $_GET["surname"];
 

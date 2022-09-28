@@ -1,7 +1,7 @@
 <?php 
 
 
-
+use ClientsController\ClientsController ; 
 require_once './src/View/header.php';
 
 //$nomDomaine = $_SERVER["HTTP_HOST"]; // string(14) "localhost:8888"
@@ -34,6 +34,8 @@ require_once './src/View/header.php';
 ?>
 
 <?php
+
+
 require_once './src/View/footer.php';
 
 
