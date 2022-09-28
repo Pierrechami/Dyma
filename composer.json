@@ -1,0 +1,15 @@
+{
+    "name": "chaminadepierre/dyma",
+    "autoload": {
+        "psr-4": {
+            "Chaminadepierre\\Dyma\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Pierre Chaminade",
+            "email": "pierre.chaminade.code@gmail.com"
+        }
+    ],
+    "require": {}
+}
