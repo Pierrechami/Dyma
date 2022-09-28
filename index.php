@@ -10,7 +10,7 @@ require_once './src/View/header.php';
 
 ?>
 
-  <form action="" method="get">
+  <form action="./index.php" method="get">
    
    <h1 class="h3 mb-3 fw-normal">Ajoutez-vous </h1>
 
