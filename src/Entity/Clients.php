@@ -6,16 +6,11 @@ namespace User;
 class Clients
 
 {
-    protected int $id ; 
+
     protected string $name ;
     protected string $surname; 
 
-    public function __construct( int $id , string $name , string $surname)
-    {
-        $this->id = $id ;
-        $this->name = $name;
-        $this->surname = $surname;
-    }
+
 
     /**
      * Get the value of id

@@ -27,12 +27,19 @@ require_once './src/View/header.php';
    <button class="w-100 btn btn-lg btn-primary" type="submit">Ajouter</button>
    <p class="mt-5 mb-3 text-muted">&copy; 2017–2022</p>
  </form>
-
-
-
 <?php
 
 
+
+?>
+
+<?php
 require_once './src/View/footer.php';
+
+
+
+
+
+
 
 ?>
