@@ -1,6 +1,8 @@
 <?php 
 namespace Chaminadepierre\Dyma;
 
+use Chaminadepierre\Dyma\Controller\ClientsController;
+
 require_once './vendor/autoload.php';
 
 require_once './src/View/header.php';
@@ -32,6 +34,10 @@ require_once './src/View/header.php';
 
 
 <?php
+
+$clientController = new ClientsController();
+
+$clientController->create();
 
 
 require_once './src/View/footer.php';

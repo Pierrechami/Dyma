@@ -3,6 +3,7 @@ namespace Chaminadepierre\Dyma\Controller;
 use PDOException;
 use Chaminadepierre\Dyma\Entity\Clients;
 use Chaminadepierre\Dyma\Controller\DbController;
+use PDO; 
 
 require_once './index.php';
 
@@ -10,11 +11,11 @@ require_once './index.php';
 
 
 
-class ClientsController extends DbController
+class ClientsController 
 {
 
     public function clients (){
-        if (isset($_GET["name"]) && isset($_GET["surname"]) && isset($_GET["submit"])) {
+        if (isset($_GET["name"]) && isset($_GET["surname"])) {
             $name =  $_GET["name"];
             $surname = $_GET["surname"];
 
@@ -36,17 +37,18 @@ class ClientsController extends DbController
         if($this->clients() !== null){
 
             $user = $this->clients();
-            $name = $user->getName();
-            $surname = $user->getSurname();
+            $Username = $user->getName();
+            $Usersurname = $user->getSurname();
         }
         try{
-            $pdo = $this->connect();
+            $pdo = new DbController();
+            $pdo = $pdo->connect();
             $statement = $pdo->prepare("INSERT INTO User VALUES (
-                :name , :surname
+                :Username , :Usersurname
             )");
-            $statement->execute(array(':name' => $name , ':surname' => $surname));
+            $statement->execute(array(':Username' => $Username , ':Usersurname' => $Usersurname));
            }catch(PDOException $e){
-               echo  $e->getMessage();
+               echo 'la création en bbd ne marche pas ';
                return false; 
            }
     
