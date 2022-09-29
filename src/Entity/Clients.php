@@ -5,7 +5,7 @@ namespace Chaminadepierre\Dyma\Entity;
 class Clients
 
 {
-
+    protected int $id; 
     protected string $name ;
     protected string $surname; 
 

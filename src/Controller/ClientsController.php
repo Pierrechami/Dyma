@@ -14,8 +14,11 @@ require_once './index.php';
 class ClientsController 
 {
 
-    public function clients (){
-        if (isset($_GET["name"]) && isset($_GET["surname"])) {
+    public function clients(){
+    
+        
+
+        if (isset($_GET["name"]) && isset($_GET["surname"]) && $_GET["name"] !== '' && $_GET["surname"] !== '') {
             $name =  $_GET["name"];
             $surname = $_GET["surname"];
 
@@ -25,28 +28,38 @@ class ClientsController
         return $user; 
 
         } else {
-            echo 'le formulaire n\'est pas rempli correctement oooooo';
             return null ; 
         }
 
         
     }
 
-      public function create () {
+      public function create() {
+
+        
 
         if($this->clients() !== null){
 
             $user = $this->clients();
             $Username = $user->getName();
             $Usersurname = $user->getSurname();
+        }else {
+            if(isset($_REQUEST["submit"])){
+                if (empty($_GET["name"]) || empty($_GET["surname"])) {
+                    echo 'vous n\'avez pas remplie le formulaire correctement ! ';
+                }
+            }
+            return $this->clients() ; 
         }
         try{
             $pdo = new DbController();
             $pdo = $pdo->connect();
             $statement = $pdo->prepare("INSERT INTO User VALUES (
-                :Username , :Usersurname
+               :id , :Username , :Usersurname
             )");
-            $statement->execute(array(':Username' => $Username , ':Usersurname' => $Usersurname));
+            $statement->execute(array(':id' => null ,':Username' => $Username , ':Usersurname' => $Usersurname));
+                echo " Bravo vous avez été enregistrer en tant que $Username $Usersurname  " ;
+
            }catch(PDOException $e){
                echo 'la création en bbd ne marche pas ';
                return false; 

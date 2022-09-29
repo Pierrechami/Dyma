@@ -19,7 +19,7 @@ use PDOException;
         $pdo = new PDO("mysql:host=$db_host;dbname=$bdd", $dbname, $dbpassword, 
         [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION ]
     );
-        echo ('connexion ok');
+
         return $pdo;
         
     } catch (PDOException $e) {
