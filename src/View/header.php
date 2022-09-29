@@ -87,10 +87,10 @@
     <link href="signin.css" rel="stylesheet">
   </head>
   <body class="container text-center ">
-  <img class="mb-4" src="./img/bb.jpg" alt="" width="72" height="57">
+  <img class="mb-4" src="/dyma/img/bb.jpg" alt="" width="72" height="57">
   <div class="jd-flex justify-content-evenly">
-  <a href="">page d'accueil</a> / 
-  <a href="">enregister un nouveau utilisateur </a> 
+  <a href="/dyma/index.php">enregister un nouveau utilisateur</a> / 
+  <a href="/dyma/src/View/listes.php">Liste des utilisateur </a> 
 
 
   </div>
