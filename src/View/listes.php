@@ -8,7 +8,7 @@ require_once '../../vendor/autoload.php';
 require_once './header.php';
 $users = new ListesController();
 $list = $users->listes();
-$delet = new DeleteClientsController() 
+
 
 ?>
 <style>
@@ -47,7 +47,7 @@ for ($i=0; $i <count($list); $i++) { ?>
 
          <td><input type="button" value="Modifier n°<?= $list[$i]["id"] ; ?>">
          
-         <input type="button" value="Supprimer n°<?php $list[$i]["id"] ;?>" onclick="<?php $delet->delete($list[$i]["id"])?>"></td>
+         <input type="button" value="Supprimer n°<?= $list[$i]["id"] ;?>" ></td>
              </tr>
         
 
